@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>İYİ Parti Didim İlçe Başkanlığı</title>
+
+  <meta name="description"
+        content="İYİ Parti Didim İlçe Başkanlığı resmi internet sitesi. Haberler, basın açıklamaları, duyurular ve çalışmalarımız.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f7f9;
+      color: #0b2342;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topbar {
+      background: #071f3e;
+      color: white;
+      padding: 9px 5%;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      background: white;
+      padding: 14px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      box-shadow: 0 2px 8px rgba(0,0,0,.07);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-box {
+      width: 56px;
+      height: 56px;
+      background: #25a9e0;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 33px;
+    }
+
+    .brand strong {
+      font-size: 20px;
+      display: block;
+    }
+
+    .brand small {
+      color: #687386;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #1595d3;
+    }
+
+    .btn-yellow {
+      background: #ffca05;
+      color: #071f3e;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .hero {
+      min-height: 430px;
+      background:
+        linear-gradient(90deg, rgba(4,27,57,.97), rgba(4,27,57,.58)),
+        linear-gradient(135deg, #0b315a, #1e7092);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 60px 8%;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      background: #ffca05;
+      color: #071f3e;
+      padding: 15px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 45px 0;
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .section-title h2 {
+      font-size: 28px;
+    }
+
+    .section-title a {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .news-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 14px rgba(0,0,0,.08);
+    }
+
+    .news-image {
+      height: 190px;
+      background: linear-gradient(135deg,#103b6d,#46aaca);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 50px;
+    }
+
+    .news-body {
+      padding: 18px;
+    }
+
+    .tag {
+      background: #1595d3;
+      color: white;
+      display: inline-block;
+      border-radius: 4px;
+      padding: 5px 8px;
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .news-body h3 {
+      font-size: 19px;
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+
+    .date {
+      color: #7a8491;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .news-footer {
+      display: flex;
+      justify-content: space-between;
+      color: #287dad;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .lower {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 25px;
+      margin-bottom: 45px;
+    }
+
+    .announcements {
+      background: #071f3e;
+      color: white;
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .announcements h2 {
+      margin-bottom: 20px;
+    }
+
+    .announcement {
+      border-top: 1px solid rgba(255,255,255,.2);
+      padding: 18px 0;
+    }
+
+    .announcement strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .quick-links {
+      background: white;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      overflow: hidden;
+      box-shadow: 0 3px 14px rgba(0,0,0,.07);
+    }
+
+    .quick {
+      padding: 30px 15px;
+      text-align: center;
+      border-right: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      font-weight: bold;
+    }
+
+    .quick span {
+      font-size: 35px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #071f3e;
+      color: white;
+      padding: 40px 5%;
+    }
+
+    footer strong {
+      font-size: 20px;
+    }
+
+    footer p {
+      margin-top: 10px;
+      color: #cbd5df;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 850px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        min-height: 380px;
+        padding: 50px 6%;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lower {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-links {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .topbar {
+        font-size: 11px;
+      }
+
+      .brand strong {
+        font-size: 16px;
+      }
+
+      .logo-box {
+        width: 48px;
+        height: 48px;
+      }
+
+      header .btn-yellow {
+        padding: 10px 13px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div>İYİ Parti Didim İlçe Başkanlığı</div>
+  <div>Didim / Aydın</div>
+</div>
+
+<header>
+
+  <div class="brand">
+    <div class="logo-box">☀️</div>
+
+    <div>
+      <strong>İYİ PARTİ</strong>
+      <small>DİDİM İLÇE BAŞKANLIĞI</small>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#">ANA SAYFA</a>
+    <a href="#haberler">HABERLER</a>
+    <a href="#duyurular">DUYURULAR</a>
+    <a href="#">KURUMSAL</a>
+    <a href="#">İLETİŞİM</a>
+  </nav>
+
+  <a class="btn-yellow" href="#">ÜYE OL</a>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>Türkiye İYİ olacak.</h1>
+
+    <p>
+      Daha özgür, daha adil ve daha müreffeh bir Türkiye için
+      Didim'de çalışmalarımıza devam ediyoruz.
+    </p>
+
+    <a href="#haberler" class="hero-button">
+      HABERLERİMİZ →
+    </a>
+
+  </div>
+
+</section>
+
+
+<section class="section" id="haberler">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Basın Açıklamaları & Haberler</h2>
+      <a href="#">TÜMÜNÜ GÖR →</a>
+    </div>
+
+
+    <div class="news-grid">
+
+      <article class="news-card">
+
+        <div class="news-image">📰</div>
+
+        <div class="news-body">
+
+          <span class="tag">HABER</span>
+
+          <h3>Didim İYİ Parti Web Sitesi Yayında</h3>
+
+          <div class="date">
+            4 Eylül 2026
+          </div>
+
+          <div class="news-footer">
+            <span>👁 1 görüntülenme</span>
+            <span>Devamını Oku →</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="news-card">
+
+        <div class="news-image">🇹🇷</div>
+
+        <div class="news-body">
+
+          <span class="tag">BASIN AÇIKLAMASI</span>
+
+          <h3>Didim için çalışmalarımıza devam ediyoruz</h3>
+
+          <div class="date">
+            İYİ Parti Didim İlçe Başkanlığı
+          </div>
+
+          <div class="news-footer">
+            <span>👁 Görüntülenme</span>
+            <span>Devamını Oku →</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="news-card">
+
+        <div class="news-image">🌊</div>
+
+        <div class="news-body">
+
+          <span class="tag">DİDİM</span>
+
+          <h3>Didim'in sorunlarına çözüm üretmeye devam edeceğiz</h3>
+
+          <div class="
