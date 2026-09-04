@@ -149,6 +149,7 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 25px;
+      gap: 18px;
     }
 
     .section-title h2 {
@@ -213,6 +214,7 @@
     .news-footer {
       display: flex;
       justify-content: space-between;
+      gap: 15px;
       color: #287dad;
       font-size: 13px;
       font-weight: bold;
@@ -332,6 +334,10 @@
         padding: 10px 13px;
         font-size: 12px;
       }
+
+      .section-title {
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -344,10 +350,8 @@
 </div>
 
 <header>
-
   <div class="brand">
     <div class="logo-box">☀️</div>
-
     <div>
       <strong>İYİ PARTİ</strong>
       <small>DİDİM İLÇE BAŞKANLIĞI</small>
@@ -363,98 +367,126 @@
   </nav>
 
   <a class="btn-yellow" href="#">ÜYE OL</a>
-
 </header>
 
-
 <section class="hero">
-
   <div class="hero-content">
-
     <h1>Türkiye İYİ olacak.</h1>
-
     <p>
       Daha özgür, daha adil ve daha müreffeh bir Türkiye için
       Didim'de çalışmalarımıza devam ediyoruz.
     </p>
-
-    <a href="#haberler" class="hero-button">
-      HABERLERİMİZ →
-    </a>
-
+    <a href="#haberler" class="hero-button">HABERLERİMİZ →</a>
   </div>
-
 </section>
 
-
 <section class="section" id="haberler">
-
   <div class="container">
-
     <div class="section-title">
       <h2>Basın Açıklamaları & Haberler</h2>
       <a href="#">TÜMÜNÜ GÖR →</a>
     </div>
 
-
-    <div class="news-grid">
-
+    <div class="news-grid" id="haber-listesi">
       <article class="news-card">
-
         <div class="news-image">📰</div>
-
         <div class="news-body">
-
           <span class="tag">HABER</span>
-
           <h3>Didim İYİ Parti Web Sitesi Yayında</h3>
-
-          <div class="date">
-            4 Eylül 2026
-          </div>
-
+          <div class="date">4 Eylül 2026</div>
           <div class="news-footer">
             <span>👁 1 görüntülenme</span>
             <span>Devamını Oku →</span>
           </div>
-
         </div>
-
       </article>
 
-
       <article class="news-card">
-
         <div class="news-image">🇹🇷</div>
-
         <div class="news-body">
-
           <span class="tag">BASIN AÇIKLAMASI</span>
-
           <h3>Didim için çalışmalarımıza devam ediyoruz</h3>
-
-          <div class="date">
-            İYİ Parti Didim İlçe Başkanlığı
-          </div>
-
+          <div class="date">İYİ Parti Didim İlçe Başkanlığı</div>
           <div class="news-footer">
             <span>👁 Görüntülenme</span>
             <span>Devamını Oku →</span>
           </div>
-
         </div>
-
       </article>
 
-
       <article class="news-card">
-
         <div class="news-image">🌊</div>
-
         <div class="news-body">
-
           <span class="tag">DİDİM</span>
-
           <h3>Didim'in sorunlarına çözüm üretmeye devam edeceğiz</h3>
+          <div class="date">İYİ Parti Didim</div>
+          <div class="news-footer">
+            <span>👁 Görüntülenme</span>
+            <span>Devamını Oku →</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-          <div class="
+<div class="container lower">
+  <section class="announcements" id="duyurular">
+    <h2>📢 Duyurular</h2>
+
+    <div class="announcement">
+      <strong>Yönetim Kurulu Toplantısı</strong>
+      İlçe Başkanlığımızda gerçekleştirilecektir.
+    </div>
+
+    <div class="announcement">
+      <strong>Etkinlikler</strong>
+      Güncel programlarımız buradan duyurulacaktır.
+    </div>
+  </section>
+
+  <section class="quick-links">
+    <a class="quick" href="#">
+      <span>👥</span>
+      İlçe Yönetimi
+    </a>
+
+    <a class="quick" href="#haberler">
+      <span>📰</span>
+      Haberler
+    </a>
+
+    <a class="quick" href="#">
+      <span>🇹🇷</span>
+      Çalışmalarımız
+    </a>
+
+    <a class="quick" href="#">
+      <span>🖼️</span>
+      Foto Galeri
+    </a>
+
+    <a class="quick" href="#">
+      <span>▶️</span>
+      Video Galeri
+    </a>
+
+    <a class="quick" href="#">
+      <span>➕</span>
+      Üye Ol
+    </a>
+  </section>
+</div>
+
+<footer>
+  <strong>İYİ Parti Didim İlçe Başkanlığı</strong>
+  <p>
+    Didim / Aydın<br>
+    Haberler • Basın Açıklamaları • Duyurular • Çalışmalarımız
+  </p>
+</footer>
+
+<!-- Supabase bağlantısını bir sonraki adımda buraya ekleyeceğiz. -->
+
+</body>
+</html>
